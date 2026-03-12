@@ -1,0 +1,24 @@
+# Environment & secrets
+data/env.json
+data/mail_config.json
+data/error.log
+
+# User data (don't commit to public repos)
+data/users.json
+data/tokens.json
+data/reset_codes.json
+data/messages/
+data/analytics.json
+
+# Cache
+data/cache/
+
+# Local PHP binary
+bin/
+
+# Old backup
+_old_public/
+
+# OS files
+.DS_Store
+Thumbs.db

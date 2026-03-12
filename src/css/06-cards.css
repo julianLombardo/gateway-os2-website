@@ -1,0 +1,230 @@
+/* GatewayOS2 — Cards */
+
+/* Feature Cards */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: var(--clay);
+}
+
+.feature-card {
+  background: var(--warm-white);
+  padding: 2.5rem 2rem;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.feature-card:hover {
+  background: var(--charcoal);
+  color: var(--cream);
+}
+
+.feature-card:hover h3 {
+  color: var(--cream);
+}
+
+.feature-card:hover p {
+  color: var(--clay);
+}
+
+.feature-card:hover .card-number {
+  color: var(--burnt-orange);
+}
+
+.card-number {
+  font-family: var(--serif);
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: rgba(0,0,0,0.06);
+  line-height: 1;
+  margin-bottom: 1rem;
+  transition: color 0.4s ease;
+}
+
+.feature-card h3 {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-bottom: 0.6rem;
+  transition: color 0.4s ease;
+}
+
+.feature-card p {
+  font-size: 0.9rem;
+  color: var(--smoke);
+  line-height: 1.6;
+  transition: color 0.4s ease;
+}
+
+/* App Categories */
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.app-category {
+  padding: 2rem 0;
+  border-top: 2px solid var(--charcoal);
+}
+
+section.dark .app-category {
+  border-top-color: var(--clay);
+}
+
+.app-category h3 {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.app-category h3 .cat-icon {
+  font-size: 0.75rem;
+  width: 28px;
+  height: 28px;
+  background: var(--burnt-orange);
+  color: var(--cream);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.app-category ul {
+  list-style: none;
+}
+
+.app-category ul li {
+  color: var(--smoke);
+  font-size: 0.9rem;
+  padding: 0.35rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+section.dark .app-category ul li {
+  color: var(--clay);
+  border-bottom-color: rgba(255,255,255,0.05);
+}
+
+.app-category ul li::before {
+  content: '\2014';
+  color: var(--clay);
+  font-size: 0.8rem;
+}
+
+/* About Cards */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--clay);
+}
+
+.about-card {
+  background: var(--warm-white);
+  padding: 3rem 2.5rem;
+}
+
+.about-card h3 {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-bottom: 0.75rem;
+}
+
+.about-card p {
+  font-size: 0.9rem;
+  color: var(--smoke);
+  line-height: 1.7;
+}
+
+/* Download Cards */
+.download-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2px;
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--clay);
+}
+
+.download-card {
+  background: var(--warm-white);
+  padding: 2.5rem;
+  position: relative;
+}
+
+.download-card.primary {
+  border-top: 3px solid var(--burnt-orange);
+}
+
+.download-card h3 {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  color: var(--charcoal);
+  margin-bottom: 0.75rem;
+}
+
+.download-card p {
+  font-size: 0.9rem;
+  color: var(--smoke);
+  line-height: 1.6;
+}
+
+.download-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--burnt-orange);
+  background: rgba(196, 98, 45, 0.08);
+  padding: 0.25rem 0.6rem;
+}
+
+.release-info {
+  margin: 1.5rem 0;
+}
+
+.release-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+  font-size: 0.85rem;
+}
+
+.release-label {
+  color: var(--stone);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.release-value {
+  color: var(--charcoal);
+  font-family: var(--mono);
+}

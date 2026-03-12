@@ -1,0 +1,37 @@
+/* GatewayOS2 — Pullquote */
+
+.pullquote {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.pullquote blockquote {
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--charcoal);
+  line-height: 1.4;
+  letter-spacing: -0.5px;
+}
+
+section.teal .pullquote blockquote {
+  color: var(--cream);
+}
+
+.pullquote cite {
+  display: block;
+  margin-top: 1.25rem;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-style: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--stone);
+}
+
+section.teal .pullquote cite {
+  color: rgba(255,255,255,0.5);
+}

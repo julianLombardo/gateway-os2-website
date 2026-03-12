@@ -1,0 +1,16 @@
+/* GatewayOS2 — Admin Tables */
+
+.admin-table { width: 100%; border-collapse: collapse; background: var(--warm-white); border: 1px solid var(--clay); }
+.admin-table th { background: var(--charcoal); color: var(--cream); padding: 0.75rem 1rem; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; text-align: left; font-weight: 600; }
+.admin-table td { padding: 0.75rem 1rem; border-bottom: 1px solid rgba(0,0,0,0.04); font-size: 0.85rem; color: var(--smoke); }
+.admin-table tr:hover td { background: rgba(196, 98, 45, 0.03); }
+.admin-badge { font-family: var(--mono); font-size: 0.65rem; padding: 0.2rem 0.5rem; text-transform: uppercase; letter-spacing: 0.5px; }
+.admin-badge.unread { background: rgba(196, 98, 45, 0.1); color: var(--burnt-orange); }
+.admin-badge.read { background: rgba(0,0,0,0.04); color: var(--stone); }
+.admin-badge.admin { background: rgba(42, 111, 111, 0.1); color: var(--teal); }
+.admin-badge.user { background: rgba(0,0,0,0.04); color: var(--stone); }
+.admin-actions { display: flex; gap: 0.5rem; }
+.admin-btn { padding: 0.35rem 0.75rem; font-size: 0.75rem; font-family: var(--sans); font-weight: 600; border: 1px solid var(--clay); background: var(--cream); color: var(--smoke); cursor: pointer; transition: all 0.2s; text-transform: uppercase; letter-spacing: 0.5px; }
+.admin-btn:hover { border-color: var(--burnt-orange); color: var(--burnt-orange); }
+.admin-btn.danger { border-color: #e55; color: #a03030; }
+.admin-btn.danger:hover { background: #a03030; color: white; }

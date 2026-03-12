@@ -1,0 +1,169 @@
+/* GatewayOS2 — Demo (Desktop Simulator & Interactive Demos) */
+
+.desktop-sim {
+  width: 100%;
+  max-width: 1024px;
+  height: 600px;
+  margin: 0 auto;
+  background: #2a2a4a;
+  border: 2px solid var(--clay);
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+}
+
+.sim-menubar {
+  height: 28px;
+  background: #1a1a2e;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--clay);
+  border-bottom: 1px solid #333;
+}
+
+.sim-menu-logo {
+  width: 18px;
+  height: 18px;
+  background: var(--burnt-orange);
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+  font-weight: 900;
+  font-size: 0.6rem;
+}
+
+.sim-menu-title { font-weight: 600; color: var(--cream); }
+.sim-menu-right { margin-left: auto; }
+
+.sim-desktop {
+  height: calc(100% - 28px - 48px);
+  position: relative;
+  background: linear-gradient(135deg, #2a2a4a 0%, #1a1a2e 100%);
+}
+
+.sim-dock {
+  height: 48px;
+  background: rgba(0,0,0,0.4);
+  border-top: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 20px;
+}
+
+.sim-dock-item {
+  width: 36px;
+  height: 36px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--cream);
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sim-dock-item:hover {
+  background: var(--burnt-orange);
+  border-color: var(--burnt-orange);
+  transform: translateY(-4px);
+}
+
+.sim-window {
+  position: absolute;
+  background: #e8e0d4;
+  border: 1px solid #999;
+  min-width: 200px;
+  min-height: 120px;
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.3);
+}
+
+.sim-window.focused { z-index: 10; box-shadow: 4px 4px 20px rgba(0,0,0,0.5); }
+
+.sim-window-titlebar {
+  height: 24px;
+  background: linear-gradient(180deg, #888 0%, #666 100%);
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  cursor: move;
+  gap: 6px;
+}
+
+.sim-window.focused .sim-window-titlebar {
+  background: linear-gradient(180deg, #555 0%, #333 100%);
+}
+
+.sim-window-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 0;
+}
+
+.sim-window-close { background: #e55; }
+.sim-window-minimize { background: #db4; }
+
+.sim-window-title {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: var(--cream);
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+.sim-window-body {
+  padding: 8px;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: #1a1a1a;
+  height: calc(100% - 24px);
+  overflow: auto;
+}
+
+.sim-terminal-body {
+  background: #1a1a1a;
+  color: #4ade80;
+  padding: 8px;
+  height: 100%;
+  font-size: 0.7rem;
+  line-height: 1.4;
+}
+
+/* Network Visualizer */
+.network-viz { max-width: 700px; margin: 0 auto; }
+.viz-controls { display: flex; gap: 1rem; margin-bottom: 2rem; justify-content: center; }
+.viz-canvas { display: flex; align-items: center; justify-content: space-between; padding: 2rem 0; position: relative; }
+.viz-node { width: 100px; height: 100px; border: 2px solid var(--clay); display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 0.85rem; font-weight: 600; color: var(--charcoal); background: var(--warm-white); }
+.viz-path { flex: 1; height: 4px; background: var(--clay); margin: 0 2rem; position: relative; }
+.viz-packet { position: absolute; width: 20px; height: 20px; border-radius: 50%; top: -8px; font-size: 0.5rem; display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-weight: 700; color: white; }
+.viz-packet.syn { background: var(--burnt-orange); }
+.viz-packet.ack { background: var(--teal); }
+.viz-packet.synack { background: var(--olive); }
+.viz-log { font-family: var(--mono); font-size: 0.8rem; margin-top: 1rem; padding: 1rem; background: var(--charcoal); color: var(--clay); max-height: 200px; overflow-y: auto; }
+.viz-log-entry { padding: 0.25rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+.viz-log-entry .viz-time { color: var(--stone); margin-right: 0.5rem; }
+
+/* Crypto Playground */
+.crypto-playground { max-width: 700px; margin: 0 auto; }
+.crypto-controls { display: flex; gap: 1rem; margin-bottom: 1.5rem; align-items: flex-end; }
+.crypto-controls .form-select { max-width: 200px; }
+.crypto-controls .form-group { flex: 1; }
+.crypto-io { display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: start; }
+.crypto-arrow { font-size: 1.5rem; color: var(--burnt-orange); display: flex; align-items: center; padding-top: 2rem; }
+.crypto-io textarea { width: 100%; padding: 0.75rem 1rem; font-family: var(--mono); font-size: 0.85rem; background: var(--cream); border: 1.5px solid var(--clay); color: var(--charcoal); resize: vertical; outline: none; }
+.crypto-io textarea:focus { border-color: var(--burnt-orange); }
+.crypto-io textarea[readonly] { background: var(--warm-white); color: var(--burnt-orange); }

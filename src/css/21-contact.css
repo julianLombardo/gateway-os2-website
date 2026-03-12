@@ -1,0 +1,49 @@
+/* GatewayOS2 — Contact */
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.contact-form-wrap {
+  background: var(--warm-white);
+  border: 1px solid var(--clay);
+  padding: 2.5rem;
+}
+
+.contact-info-card {
+  padding: 2rem;
+  border: 1px solid var(--clay);
+  background: var(--warm-white);
+}
+
+.contact-info-card h3 {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  color: var(--charcoal);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--clay);
+}
+
+.contact-method {
+  margin-bottom: 1.25rem;
+}
+
+.contact-method h4 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--stone);
+  margin-bottom: 0.2rem;
+  font-weight: 600;
+}
+
+.contact-method p {
+  font-size: 0.9rem;
+  color: var(--smoke);
+}

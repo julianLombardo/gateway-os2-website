@@ -1,0 +1,61 @@
+/* === 30-admin-layout.css === */
+/* GatewayOS2 — Admin Layout */
+
+.admin-layout { display: flex; min-height: 100vh; }
+.admin-sidebar { width: 240px; background: var(--charcoal); color: var(--clay); padding: 0; flex-shrink: 0; position: fixed; top: 0; bottom: 0; overflow-y: auto; }
+.admin-sidebar-brand { padding: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.admin-sidebar-brand h3 { font-family: var(--serif); font-size: 1rem; color: var(--cream); }
+.admin-sidebar-brand span { font-size: 0.7rem; color: var(--stone); }
+.admin-sidebar-nav { padding: 1rem 0; }
+.admin-sidebar-nav a { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1.5rem; color: var(--clay); font-size: 0.85rem; transition: all 0.2s; }
+.admin-sidebar-nav a:hover { background: rgba(255,255,255,0.05); color: var(--cream); }
+.admin-sidebar-nav a.active { background: rgba(196, 98, 45, 0.15); color: var(--burnt-orange); border-left: 3px solid var(--burnt-orange); }
+.admin-nav-badge { background: var(--burnt-orange); color: var(--cream); font-size: 0.65rem; padding: 0.15rem 0.4rem; margin-left: auto; font-weight: 700; }
+.admin-main { margin-left: 240px; flex: 1; background: var(--cream); }
+.admin-topbar { padding: 1rem 2rem; background: var(--warm-white); border-bottom: 1px solid rgba(0,0,0,0.06); display: flex; justify-content: space-between; align-items: center; }
+.admin-topbar h2 { font-family: var(--serif); font-size: 1.25rem; color: var(--charcoal); }
+.admin-content { padding: 2rem; }
+
+
+/* === 31-admin-tables.css === */
+/* GatewayOS2 — Admin Tables */
+
+.admin-table { width: 100%; border-collapse: collapse; background: var(--warm-white); border: 1px solid var(--clay); }
+.admin-table th { background: var(--charcoal); color: var(--cream); padding: 0.75rem 1rem; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; text-align: left; font-weight: 600; }
+.admin-table td { padding: 0.75rem 1rem; border-bottom: 1px solid rgba(0,0,0,0.04); font-size: 0.85rem; color: var(--smoke); }
+.admin-table tr:hover td { background: rgba(196, 98, 45, 0.03); }
+.admin-badge { font-family: var(--mono); font-size: 0.65rem; padding: 0.2rem 0.5rem; text-transform: uppercase; letter-spacing: 0.5px; }
+.admin-badge.unread { background: rgba(196, 98, 45, 0.1); color: var(--burnt-orange); }
+.admin-badge.read { background: rgba(0,0,0,0.04); color: var(--stone); }
+.admin-badge.admin { background: rgba(42, 111, 111, 0.1); color: var(--teal); }
+.admin-badge.user { background: rgba(0,0,0,0.04); color: var(--stone); }
+.admin-actions { display: flex; gap: 0.5rem; }
+.admin-btn { padding: 0.35rem 0.75rem; font-size: 0.75rem; font-family: var(--sans); font-weight: 600; border: 1px solid var(--clay); background: var(--cream); color: var(--smoke); cursor: pointer; transition: all 0.2s; text-transform: uppercase; letter-spacing: 0.5px; }
+.admin-btn:hover { border-color: var(--burnt-orange); color: var(--burnt-orange); }
+.admin-btn.danger { border-color: #e55; color: #a03030; }
+.admin-btn.danger:hover { background: #a03030; color: white; }
+
+
+/* === 32-admin-editor.css === */
+/* GatewayOS2 — Admin Blog Editor */
+
+.editor-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.editor-panel { background: var(--warm-white); border: 1px solid var(--clay); }
+.editor-header { padding: 0.75rem 1rem; background: var(--charcoal); color: var(--cream); font-family: var(--mono); font-size: 0.75rem; }
+.editor-body { padding: 1rem; }
+.editor-body textarea { width: 100%; min-height: 400px; font-family: var(--mono); font-size: 0.85rem; border: none; background: transparent; color: var(--charcoal); resize: vertical; outline: none; line-height: 1.6; }
+.editor-preview { padding: 1.5rem; font-size: 0.9rem; color: var(--smoke); line-height: 1.7; overflow-y: auto; max-height: 500px; }
+.editor-preview h3 { font-family: var(--serif); margin: 1.5rem 0 0.5rem; color: var(--charcoal); }
+.editor-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem; }
+
+
+/* === 33-admin-charts.css === */
+/* GatewayOS2 — Admin Analytics Charts */
+
+.admin-stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2rem; }
+.admin-stat-card { background: var(--warm-white); border: 1px solid var(--clay); padding: 1.5rem; }
+.admin-stat-card .stat-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: var(--stone); margin-bottom: 0.25rem; }
+.admin-stat-card .stat-value { font-family: var(--serif); font-size: 2rem; font-weight: 700; color: var(--charcoal); }
+.chart-container { background: var(--warm-white); border: 1px solid var(--clay); padding: 1.5rem; margin-bottom: 2rem; }
+.chart-container canvas { width: 100%; height: 300px; }
+.chart-title { font-family: var(--serif); font-size: 1rem; color: var(--charcoal); margin-bottom: 1rem; }

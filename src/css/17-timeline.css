@@ -1,0 +1,54 @@
+/* GatewayOS2 — Timeline */
+
+.timeline {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255,255,255,0.1);
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 2.5rem;
+  padding-left: 2rem;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -2rem;
+  top: 0.25rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid var(--clay);
+  background: var(--charcoal);
+}
+
+.timeline-marker.active {
+  background: var(--burnt-orange);
+  border-color: var(--burnt-orange);
+  box-shadow: 0 0 12px rgba(196, 98, 45, 0.4);
+}
+
+.timeline-content h3 {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  color: var(--cream);
+  margin-bottom: 0.3rem;
+}
+
+.timeline-content p {
+  font-size: 0.85rem;
+  color: var(--clay);
+  line-height: 1.6;
+}

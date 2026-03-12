@@ -1,0 +1,24 @@
+/* GatewayOS2 — Fonts & Custom Properties */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --cream: #f5f0e8;
+  --warm-white: #faf7f2;
+  --charcoal: #1a1a1a;
+  --ink: #2c2c2c;
+  --smoke: #4a4a4a;
+  --stone: #8a8578;
+  --clay: #b8a99a;
+  --burnt-orange: #c4622d;
+  --rust: #a0452a;
+  --teal: #2a6f6f;
+  --deep-teal: #1d4e4e;
+  --olive: #5c6b4f;
+  --gold: #c9a84c;
+  --blush: #d4a59a;
+
+  --serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --sans: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  --mono: 'JetBrains Mono', 'Courier New', monospace;
+}

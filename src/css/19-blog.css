@@ -1,0 +1,152 @@
+/* GatewayOS2 — Blog */
+
+.blog-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.blog-card {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--clay);
+  transition: all 0.3s;
+}
+
+.blog-card:first-child {
+  padding-top: 0;
+}
+
+.blog-card:hover {
+  padding-left: 0.5rem;
+}
+
+.blog-card-date {
+  flex-shrink: 0;
+  width: 60px;
+  text-align: center;
+}
+
+.blog-day {
+  display: block;
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  line-height: 1;
+}
+
+.blog-month {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--stone);
+  font-weight: 600;
+}
+
+.blog-card-body h2 {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.blog-card-body h2 a {
+  color: var(--charcoal);
+  transition: color 0.2s;
+}
+
+.blog-card-body h2 a:hover {
+  color: var(--burnt-orange);
+}
+
+.blog-card-body > p {
+  font-size: 0.9rem;
+  color: var(--smoke);
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+.blog-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.blog-tag {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.2rem 0.5rem;
+  background: rgba(196, 98, 45, 0.08);
+  color: var(--burnt-orange);
+  transition: background 0.2s;
+}
+
+.blog-tag:hover {
+  background: rgba(196, 98, 45, 0.15);
+  color: var(--rust);
+}
+
+.blog-read-more {
+  margin-left: auto;
+  font-size: 0.8rem;
+}
+
+/* Blog Article */
+.blog-article {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.blog-tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.blog-body h3 {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  color: var(--charcoal);
+  margin: 2rem 0 0.75rem;
+}
+
+.blog-body p {
+  font-size: 0.95rem;
+  color: var(--smoke);
+  line-height: 1.75;
+  margin-bottom: 0.75rem;
+}
+
+.blog-body strong {
+  color: var(--charcoal);
+}
+
+.blog-body code {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  background: rgba(0,0,0,0.04);
+  padding: 0.1rem 0.4rem;
+  color: var(--burnt-orange);
+}
+
+.blog-body a {
+  color: var(--burnt-orange);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.blog-nav-back {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--clay);
+}
+
+.blog-nav-back a {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+}

@@ -1,0 +1,10 @@
+/* GatewayOS2 — Admin Blog Editor */
+
+.editor-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.editor-panel { background: var(--warm-white); border: 1px solid var(--clay); }
+.editor-header { padding: 0.75rem 1rem; background: var(--charcoal); color: var(--cream); font-family: var(--mono); font-size: 0.75rem; }
+.editor-body { padding: 1rem; }
+.editor-body textarea { width: 100%; min-height: 400px; font-family: var(--mono); font-size: 0.85rem; border: none; background: transparent; color: var(--charcoal); resize: vertical; outline: none; line-height: 1.6; }
+.editor-preview { padding: 1.5rem; font-size: 0.9rem; color: var(--smoke); line-height: 1.7; overflow-y: auto; max-height: 500px; }
+.editor-preview h3 { font-family: var(--serif); margin: 1.5rem 0 0.5rem; color: var(--charcoal); }
+.editor-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem; }

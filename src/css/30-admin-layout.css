@@ -1,0 +1,16 @@
+/* GatewayOS2 — Admin Layout */
+
+.admin-layout { display: flex; min-height: 100vh; }
+.admin-sidebar { width: 240px; background: var(--charcoal); color: var(--clay); padding: 0; flex-shrink: 0; position: fixed; top: 0; bottom: 0; overflow-y: auto; }
+.admin-sidebar-brand { padding: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.admin-sidebar-brand h3 { font-family: var(--serif); font-size: 1rem; color: var(--cream); }
+.admin-sidebar-brand span { font-size: 0.7rem; color: var(--stone); }
+.admin-sidebar-nav { padding: 1rem 0; }
+.admin-sidebar-nav a { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1.5rem; color: var(--clay); font-size: 0.85rem; transition: all 0.2s; }
+.admin-sidebar-nav a:hover { background: rgba(255,255,255,0.05); color: var(--cream); }
+.admin-sidebar-nav a.active { background: rgba(196, 98, 45, 0.15); color: var(--burnt-orange); border-left: 3px solid var(--burnt-orange); }
+.admin-nav-badge { background: var(--burnt-orange); color: var(--cream); font-size: 0.65rem; padding: 0.15rem 0.4rem; margin-left: auto; font-weight: 700; }
+.admin-main { margin-left: 240px; flex: 1; background: var(--cream); }
+.admin-topbar { padding: 1rem 2rem; background: var(--warm-white); border-bottom: 1px solid rgba(0,0,0,0.06); display: flex; justify-content: space-between; align-items: center; }
+.admin-topbar h2 { font-family: var(--serif); font-size: 1.25rem; color: var(--charcoal); }
+.admin-content { padding: 2rem; }

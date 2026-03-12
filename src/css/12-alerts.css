@@ -1,0 +1,20 @@
+/* GatewayOS2 — Alerts */
+
+.auth-alert {
+  padding: 0.85rem 1.25rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.auth-alert.error {
+  background: rgba(229, 85, 85, 0.08);
+  border-left: 3px solid #e55;
+  color: #a03030;
+}
+
+.auth-alert.success {
+  background: rgba(42, 111, 111, 0.08);
+  border-left: 3px solid var(--teal);
+  color: var(--deep-teal);
+}

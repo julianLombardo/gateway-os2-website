@@ -1,0 +1,76 @@
+/* GatewayOS2 — Buttons & Dividers */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 2rem;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: var(--charcoal);
+  color: var(--cream);
+}
+
+.btn-primary:hover {
+  background: var(--burnt-orange);
+  color: var(--warm-white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(196, 98, 45, 0.2);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--charcoal);
+  border: 1.5px solid var(--charcoal);
+}
+
+.btn-secondary:hover {
+  background: var(--charcoal);
+  color: var(--cream);
+}
+
+.btn-danger {
+  background: #a03030;
+  color: var(--cream);
+  width: 100%;
+  justify-content: center;
+}
+
+.btn-danger:hover {
+  background: #c03030;
+  color: white;
+}
+
+/* Divider with decorative element */
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  height: 1px;
+  width: 80px;
+  background: var(--clay);
+}
+
+.divider .diamond {
+  width: 8px;
+  height: 8px;
+  background: var(--burnt-orange);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}

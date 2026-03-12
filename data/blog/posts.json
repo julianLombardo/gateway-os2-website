@@ -1,0 +1,29 @@
+[
+    {
+        "id": "welcome-to-gatewayos2",
+        "title": "Welcome to GatewayOS2",
+        "date": "2026-03-09",
+        "author": "Julian Lombardo",
+        "tags": ["announcement", "release"],
+        "excerpt": "Introducing GatewayOS2 — a bare-metal x86 operating system with a NeXTSTEP-inspired GUI, 50+ applications, and zero external dependencies.",
+        "content": "After months of development, GatewayOS2 is here.\n\nThis is a complete operating system built from scratch — every driver, every protocol, every pixel. No libc, no libstdc++, no frameworks. Just C++, C, and Assembly running directly on x86 hardware.\n\n## What's Included\n\n- **50+ applications** spanning productivity, games, security, and development\n- **Full TCP/IP networking** with E1000 NIC driver, DHCP, and DNS\n- **Java IDE** with recursive-descent interpreter\n- **PE32 loader** for running Windows executables with 60+ Win32 API shims\n- **Persistent storage** via ATA PIO driver\n- **Compositing window manager** with draggable windows at 1024x768x32bpp\n\n## The Philosophy\n\nGatewayOS2 exists because the best way to understand a machine is to speak its language directly. No abstractions. No shortcuts.\n\nThe entire kernel compiles to roughly 100 kilobytes.\n\n## What's Next\n\nThis is just the beginning. Future work includes expanded hardware support, AI integration, and continued exploration of what's possible when you build from nothing.\n\nCheck out the [source code on GitHub](https://github.com/julianLombardo/GatewayOS2) and try building it yourself."
+    },
+    {
+        "id": "building-a-tcp-stack-from-scratch",
+        "title": "Building a TCP/IP Stack from Scratch",
+        "date": "2026-03-10",
+        "author": "Julian Lombardo",
+        "tags": ["technical", "networking"],
+        "excerpt": "How I implemented a complete networking stack — from Ethernet frames to TCP connections — inside a bare-metal OS with no libraries.",
+        "content": "One of the most challenging parts of GatewayOS2 was building the networking stack. Here's how it works, layer by layer.\n\n## The Hardware: E1000 NIC\n\nEverything starts with the Intel E1000 network interface controller. The driver initializes TX/RX descriptor ring buffers, configures the MAC address, and handles interrupts for incoming packets.\n\nThe E1000 is chosen because QEMU emulates it well and the programming interface is well-documented.\n\n## Layer by Layer\n\n**Ethernet** — Every packet on the network is wrapped in an Ethernet frame. The driver constructs frames with source/destination MAC addresses and an EtherType field that tells the next layer what protocol is inside.\n\n**ARP** — Before you can send an IP packet, you need to know the MAC address of the destination. ARP (Address Resolution Protocol) broadcasts a \"who has this IP?\" query and caches the response.\n\n**IPv4** — IP packets carry the actual data across the network. The implementation handles header construction, checksum calculation, and basic routing.\n\n**UDP** — Simple, connectionless datagrams. Used for DNS queries and DHCP. No handshake, no acknowledgment — just fire and forget.\n\n**TCP** — The complex one. A full state machine implementing the three-way handshake (SYN, SYN+ACK, ACK), data transfer with sequence numbers, and graceful connection teardown.\n\n**DHCP** — On boot, the OS broadcasts a DHCP discover message to automatically configure its IP address, subnet mask, gateway, and DNS server.\n\n**DNS** — Translates hostnames to IP addresses. Essential for the mail client to connect to Gmail's servers.\n\n## The Result\n\nGatewayOS2 can connect to the real internet, resolve domain names, and exchange data over TCP — all running on bare metal with no operating system underneath. Because GatewayOS2 *is* the operating system."
+    },
+    {
+        "id": "from-gatewayos-to-gatewayos2",
+        "title": "From TheGateWayOS to GatewayOS2",
+        "date": "2026-03-11",
+        "author": "Julian Lombardo",
+        "tags": ["devlog", "history"],
+        "excerpt": "The evolution from a cyberpunk amber-themed OS to a NeXTSTEP-inspired system with 50+ apps — what changed and why.",
+        "content": "GatewayOS2 didn't appear out of thin air. It evolved from TheGateWayOS, my first bare-metal operating system.\n\n## TheGateWayOS\n\nThe original was a cyberpunk-themed OS with an amber color scheme. It proved the concept — that one person could build a functioning operating system from scratch. But it was limited: basic graphics, minimal applications, no networking.\n\n## The Rewrite\n\nGatewayOS2 is a complete rewrite. Not a refactor, not an update — a new system built on the lessons learned from the first.\n\nKey decisions in the rewrite:\n\n1. **NeXTSTEP-inspired design** — Clean, professional aesthetics instead of the cyberpunk theme. The GUI system was rebuilt from the ground up with a proper compositing window manager.\n\n2. **Networking from day one** — The E1000 driver and TCP/IP stack were core architecture decisions, not afterthoughts.\n\n3. **Application ecosystem** — Instead of a few demo apps, GatewayOS2 ships with 50+ applications across every category.\n\n4. **PE32 compatibility** — The ability to load Windows executables opened up possibilities no hobby OS typically has.\n\n5. **Java IDE** — A recursive-descent interpreter running on bare metal. Because why not.\n\n## Lessons Learned\n\n- Start with the architecture, not the features\n- Memory management decisions affect everything downstream\n- A good window manager makes the whole system feel polished\n- Networking is hard but transformative\n\nThe journey from TheGateWayOS to GatewayOS2 taught me more about computers than any textbook could. And it's only the beginning."
+    }
+]

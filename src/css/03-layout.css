@@ -1,0 +1,71 @@
+/* GatewayOS2 — Layout */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+/* Sections */
+section {
+  padding: 6rem 3rem;
+  position: relative;
+}
+
+section.alt {
+  background: var(--warm-white);
+}
+
+section.dark {
+  background: var(--charcoal);
+  color: var(--cream);
+}
+
+section.dark h2,
+section.dark h3 {
+  color: var(--cream);
+}
+
+section.dark p {
+  color: var(--clay);
+}
+
+section.teal {
+  background: var(--teal);
+  color: var(--cream);
+}
+
+section.teal h2 { color: var(--cream); }
+section.teal p { color: rgba(255,255,255,0.75); }
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-header .overline {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--burnt-orange);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.section-header h2 {
+  font-family: var(--serif);
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  letter-spacing: -1px;
+  margin-bottom: 0.75rem;
+}
+
+.section-header p {
+  font-size: 1.05rem;
+  color: var(--smoke);
+  max-width: 520px;
+  margin: 0 auto;
+  font-weight: 300;
+}

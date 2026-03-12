@@ -1,0 +1,215 @@
+/* GatewayOS2 — Auth & Dashboard */
+
+/* Dashboard */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--clay);
+}
+
+.dash-card {
+  background: var(--warm-white);
+  padding: 2rem;
+}
+
+.dash-card.danger {
+  border-top: 2px solid #e55;
+}
+
+.dash-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.avatar {
+  width: 52px;
+  height: 52px;
+  background: var(--charcoal);
+  color: var(--cream);
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dash-card-header h3 {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  color: var(--charcoal);
+}
+
+.dash-meta {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--stone);
+}
+
+.dash-card-title {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  color: var(--charcoal);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--clay);
+}
+
+.dash-card-body {
+  margin-top: 0.5rem;
+}
+
+.dash-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+
+.dash-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--stone);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.dash-value {
+  font-size: 0.9rem;
+  color: var(--charcoal);
+}
+
+/* Settings Page */
+.settings-layout {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 2.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.settings-main .auth-card {
+  max-width: 100%;
+}
+
+.settings-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.settings-status,
+.settings-test,
+.settings-help {
+  background: var(--warm-white);
+  border: 1px solid var(--clay);
+  padding: 1.5rem;
+}
+
+.settings-status h3,
+.settings-test h3,
+.settings-help h3 {
+  font-family: var(--serif);
+  font-size: 1rem;
+  color: var(--charcoal);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--clay);
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--stone);
+  font-weight: 500;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--clay);
+}
+
+.status-indicator.active .status-dot {
+  background: #5b5;
+}
+
+.status-indicator.active {
+  color: var(--charcoal);
+}
+
+.status-detail {
+  font-size: 0.8rem;
+  color: var(--stone);
+  margin-top: 0.4rem;
+  font-family: var(--mono);
+}
+
+.help-item {
+  margin-bottom: 1rem;
+}
+
+.help-item:last-child {
+  margin-bottom: 0;
+}
+
+.help-item h4 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--charcoal);
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+
+.help-item p {
+  font-size: 0.8rem;
+  color: var(--smoke);
+  line-height: 1.5;
+}
+
+/* Company Vision */
+.vision-layout {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.vision-text p {
+  font-size: 1rem;
+  color: var(--smoke);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.company-values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--clay);
+}
+
+.value-item h4 {
+  font-family: var(--serif);
+  font-size: 1rem;
+  color: var(--charcoal);
+  margin-bottom: 0.3rem;
+}
+
+.value-item p {
+  font-size: 0.8rem;
+  color: var(--stone);
+  line-height: 1.5;
+}

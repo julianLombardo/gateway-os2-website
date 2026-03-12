@@ -1,0 +1,63 @@
+/* GatewayOS2 — Utilities & Accessibility */
+
+/* Skip Nav */
+.skip-nav {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--charcoal);
+  color: var(--cream);
+  font-size: 0.85rem;
+  z-index: 999;
+  transition: top 0.2s;
+}
+
+.skip-nav:focus {
+  top: 0.5rem;
+}
+
+/* Focus states */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--burnt-orange);
+  outline-offset: 2px;
+}
+
+/* Screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Big Statement */
+.big-statement {
+  padding: 8rem 3rem;
+  text-align: center;
+}
+
+.big-statement h2 {
+  font-family: var(--serif);
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--cream);
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+.big-statement h2 em {
+  font-style: italic;
+  color: var(--burnt-orange);
+}

@@ -1,0 +1,9 @@
+/* GatewayOS2 — Admin Analytics Charts */
+
+.admin-stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2rem; }
+.admin-stat-card { background: var(--warm-white); border: 1px solid var(--clay); padding: 1.5rem; }
+.admin-stat-card .stat-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: var(--stone); margin-bottom: 0.25rem; }
+.admin-stat-card .stat-value { font-family: var(--serif); font-size: 2rem; font-weight: 700; color: var(--charcoal); }
+.chart-container { background: var(--warm-white); border: 1px solid var(--clay); padding: 1.5rem; margin-bottom: 2rem; }
+.chart-container canvas { width: 100%; height: 300px; }
+.chart-title { font-family: var(--serif); font-size: 1rem; color: var(--charcoal); margin-bottom: 1rem; }

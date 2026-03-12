@@ -1,0 +1,131 @@
+/* GatewayOS2 — Code Explorer */
+
+.code-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid var(--clay);
+  margin-bottom: 2.5rem;
+  overflow-x: auto;
+}
+
+.code-tab {
+  padding: 0.75rem 1.5rem;
+  background: none;
+  border: none;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--stone);
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap;
+  position: relative;
+}
+
+.code-tab::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: transparent;
+  transition: background 0.3s;
+}
+
+.code-tab:hover { color: var(--charcoal); }
+
+.code-tab.active {
+  color: var(--burnt-orange);
+}
+
+.code-tab.active::after {
+  background: var(--burnt-orange);
+}
+
+.code-panel {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+.code-panel.active { display: block; }
+
+.code-split {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.code-block {
+  background: var(--charcoal);
+  border: 1px solid var(--border, rgba(0,0,0,0.1));
+  overflow: hidden;
+}
+
+.code-block.large pre {
+  padding: 1.5rem;
+  overflow-x: auto;
+}
+
+.code-label {
+  background: #111;
+  padding: 0.6rem 1rem;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--stone);
+  letter-spacing: 0.5px;
+}
+
+.code-block code {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  line-height: 1.7;
+  color: var(--clay);
+}
+
+.code-block .kw { color: #c4622d; }
+.code-block .num { color: #c9a84c; }
+.code-block .cmt { color: #5c6b4f; }
+.code-block .ln {
+  color: #444;
+  user-select: none;
+  display: inline-block;
+  width: 2.5em;
+  text-align: right;
+  margin-right: 1em;
+}
+
+.code-annotations {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.annotation {
+  padding: 1.25rem 1.5rem;
+  border-left: 3px solid var(--burnt-orange);
+  background: rgba(196, 98, 45, 0.04);
+}
+
+.annotation h4 {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--charcoal);
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.annotation p {
+  font-size: 0.85rem;
+  color: var(--smoke);
+  line-height: 1.6;
+}
+
+.annotation code {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  background: rgba(0,0,0,0.06);
+  padding: 0.15rem 0.4rem;
+  color: var(--burnt-orange);
+}

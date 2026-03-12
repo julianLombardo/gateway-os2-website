@@ -1,0 +1,51 @@
+/* GatewayOS2 — Specs */
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-top: 1px solid var(--clay);
+  border-bottom: 1px solid var(--clay);
+}
+
+.spec-item {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.spec-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background: var(--clay);
+}
+
+.spec-item .value {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-bottom: 0.3rem;
+}
+
+section.dark .spec-item .value {
+  color: var(--cream);
+}
+
+section.dark .spec-item::after {
+  background: rgba(255,255,255,0.1);
+}
+
+.spec-item .desc {
+  font-size: 0.75rem;
+  color: var(--stone);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+}

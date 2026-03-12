@@ -1,0 +1,50 @@
+/* GatewayOS2 — Terminal */
+
+.terminal {
+  background: var(--charcoal);
+  max-width: 640px;
+  margin: 3rem auto;
+  position: relative;
+}
+
+.terminal::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border: 1px solid var(--clay);
+  pointer-events: none;
+}
+
+.terminal-header {
+  background: #111;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.terminal-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.terminal-dot.red { background: #e55; }
+.terminal-dot.yellow { background: #db4; }
+.terminal-dot.green { background: #5b5; }
+
+.terminal-body {
+  padding: 1.5rem;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  line-height: 1.8;
+  color: var(--clay);
+  overflow-x: auto;
+}
+
+.terminal-body .prompt { color: var(--teal); }
+.terminal-body .cmd { color: var(--cream); }
+.terminal-body .comment { color: #555; }
